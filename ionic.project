@@ -1,0 +1,12 @@
+{
+  "name": "urbanGeist",
+  "app_id": "fcd753fc",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}
