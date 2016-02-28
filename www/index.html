@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -11,49 +11,50 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-
     <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
     <script src="cordova.js"></script>
-
     <!-- your app's js -->
     <script src="js/app.js"></script>
   </head>
-  <body ng-app="urbangeist" ng-controller="TodoCtrl">
-    <ion-side-menus>
+  <body ng-app="urbangeist">
+    <ion-nav-bar class="bar-energized nav-title-slide-ios7">
+      <ion-nav-back-button class="button-clear">
+        <i class="ion-arrow-left-c"></i> Back
+      </ion-nav-back-button>
+    </ion-nav-bar>
+  <ion-nav-view></ion-nav-view>
 
-    <!-- Center content -->
-    <ion-side-menu-content>
-      <ion-header-bar class="bar-dark">
-        <h1 class="title">Urbangeist</h1>
-      </ion-header-bar>
+  <script id='index.html' type='text/ng-template'>
+    <ion-view title="Urbangeist">
       <ion-content>
-        <!-- our list and list items -->
-        <ion-list>
-          <ion-item ng-repeat="task in tasks">
-            {{task.title}}
-          </ion-item>
-        </ion-list>
+        <p>Information about the ghost</p>      
       </ion-content>
-    </ion-side-menu-content>
-
-    <!-- Left menu -->
-    <ion-side-menu side="left">
-      <ion-header-bar class="bar-dark">
-        <h1 class="title">Projects</h1>
-      </ion-header-bar>
-    </ion-side-menu>
-
-  </ion-side-menus>
-    <ion-content>
-      <h1>
-        Cecilia has just haunted you!
-      </h1>
-    <button class="button button-block button-outline">Meet Cecilia</button>
-    </ion-content>
-  
-    
-   <div class="bar bar-footer">
-    <button class="button button-clear button-block">Cecilia&apos;s Journey</button>
-</div>
+      <div class="bar bar-footer">
+          <button ui-sref="details" class="button button-full button-possitive">Cecilia&apos;s Journey</button>
+        </div>
+    </ion-view>
+  </script>
+  <script id='details.html' type='text/ng-template'>
+    <ion-view title="Cecilia&apos;s Journey">
+      <ion-content>
+        <div class="list card">
+          <div class="item item-text-wrap">
+            <h2>2016-01-02</h2>
+          </div>
+          <div class="item item-body">
+            <img class="full-image" src="resources/default.jpg">
+          </div>
+          </br>
+          <div class="item item-text-wrap">
+            <h2>2016-01-10</h2>
+          </div>
+          <div class="item item-body">
+            <img class="full-image" src="resources/default.jpg">
+          </div>
+        </div>
+      </ion-content>
+    </ion-view>
+  </script>
   </body>
 </html>
