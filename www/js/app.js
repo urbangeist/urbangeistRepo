@@ -24,5 +24,101 @@ angular.module('urbangeist', ['ionic'])
 })
 
 
+var app = angular.module('urbangeist', ['ionic']);
+app.config(function($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider.otherwise('/')
+  
+    $stateProvider
+    .state('index', {
+      url: '/',
+      templateUrl: 'templates/intro.html',
+      controller:'introCtrl'
+    })
+    .state('quest', {
+      url: '/quest',
+      templateUrl: 'templates/quest.html',
+      controller:'questCtrl'
+    })
+    .state('journey', {
+      url: '/journey',
+      templateUrl: 'templates/journey.html',
+     // controller:'journeyCtrl'
+    })
+    .state('questDescription', {
+      url: '/questDescription',
+      templateUrl: 'templates/quest-description.html',
+      controller:'questDescCtrl'
+    })
+    
+    //$stateProvider.state('index', {
+    //  url: '/',
+    //  views: {
+    //    intro: {
+    //      templateUrl: 'templates/intro.html'
+    //    }
+    //  }
+    //})
+    
+    //$stateProvider.state('quest', {
+    //  url: '/quest',
+    //  views: {
+    //    quest: {
+    //      templateUrl: 'templates/quest.html'
+    //    }
+    //  }
+    //})
+    
+    //$stateProvider.state('journey', {
+    //  url: '/journey',
+    //  views: {
+    //    quest: {
+    //      templateUrl: 'templates/journey.html'
+    //    }
+    //  }
+    //})
+    
+});
+
+app.controller('introCtrl', function($scope) {
+	$scope.ghostName = "CeciliaMofo";
+})
+
+app.controller('questCtrl', function($scope) {
+	$scope.ghostIntroduction = "This is my Ghost introduction..";
+})
+
+app.controller('questDescCtrl', function($scope) {
+	$scope.questTitle = "Where the pink rose lays, there will be blood..";
+  $scope.questTip = "I need to find the Salvation Army";
+})
+
+app.controller('hintCtrl', function($scope,$ionicPopup, $timeout) {
+  $scope.showAlert = function() {
+   var alertPopup = $ionicPopup.alert({
+     title: 'Hint #1',
+     template: 'It might taste good'
+   });
+
+   alertPopup.then(function(res) {
+     console.log('Thank you for not eating my delicious ice cream cone');
+   });
+ };
+	$scope.hintNo = "2";
+  //$scope.hintDesc = "The Salvation Army creates dramatic sceneries to be used for education. They ofter hire me to take photos of these scences";
+})
+
+app.controller('ghostHistory', function($scope) {
+  $scope.items = [
+    {title: "Item 1"},
+    {title: "Item 2"},
+    {title: "Item 3"},
+    {title: "Item 4"},
+    {title: "Item 5"},
+  ]
+  $scope.data = {
+    showReordering: false
+  }
+})
+
 
 
