@@ -1,0 +1,12 @@
+<ion-view title="intro"  padding="true">
+	<ion-content padding="true">
+    <div ng-controller="introCtrl">
+    <h2>{{ghostName}}, has just haunted you!</h2>
+     <a  class="button button-block" ui-sref="quest">Help {{ghostName}}</a>
+    <!-- <div ui-view="quest"></div>-->
+    </div>
+	</ion-content>
+  <ion-footer-bar>
+    <a class="button button-block" ui-sref="journey" nav-transition="android">{{ghostName}} Journey</a>
+  </ion-footer-bar>
+</ion-view>
