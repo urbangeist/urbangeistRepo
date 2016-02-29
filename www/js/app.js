@@ -50,33 +50,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
       controller:'questDescCtrl'
     })
     
-    //$stateProvider.state('index', {
-    //  url: '/',
-    //  views: {
-    //    intro: {
-    //      templateUrl: 'templates/intro.html'
-    //    }
-    //  }
-    //})
-    
-    //$stateProvider.state('quest', {
-    //  url: '/quest',
-    //  views: {
-    //    quest: {
-    //      templateUrl: 'templates/quest.html'
-    //    }
-    //  }
-    //})
-    
-    //$stateProvider.state('journey', {
-    //  url: '/journey',
-    //  views: {
-    //    quest: {
-    //      templateUrl: 'templates/journey.html'
-    //    }
-    //  }
-    //})
-    
 });
 
 app.controller('introCtrl', function($scope) {
