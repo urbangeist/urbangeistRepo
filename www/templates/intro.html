@@ -1,12 +1,11 @@
 <ion-view title="intro"  padding="true">
 	<ion-content padding="true">
     <div ng-controller="introCtrl">
+     <img src="http://orig12.deviantart.net/d929/f/2013/013/0/1/profile_picture_by_little_ghost_girl-d5rd87g.jpg" width="30%">
     <h2>{{ghostName}}, has just haunted you!</h2>
-     <a  class="button button-block" ui-sref="quest">Help {{ghostName}}</a>
+    <p>Short Ghost Introduction...</p>
+     <a  class="button button-block" ui-sref="meetGhost">Meet {{ghostName}}</a>
     <!-- <div ui-view="quest"></div>-->
     </div>
 	</ion-content>
-  <ion-footer-bar>
-    <a class="button button-block" ui-sref="journey" nav-transition="android">{{ghostName}} Journey</a>
-  </ion-footer-bar>
 </ion-view>

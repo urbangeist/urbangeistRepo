@@ -2,14 +2,30 @@
   <ion-nav-title>3days 4 hours</ion-nav-title>
 	<ion-content padding="true">
     <div ng-controller="questDescCtrl">
-      <h2>{{questTitle}}</h2>
-      <p>{{questTip}}</p>
+      <h3>{{questTitle}}</h3>
+      <div class="card">
+        <div class="item item-text-wrap">
+         <p>{{questTip}}</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-text-wrap">
+         <p>Speed is important. So important that you only notice when it isn't there. Ionic is built to perform and behave great on the latest mobile devices.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="item item-text-wrap">
+         <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+      </div>
     </div>
-    <div ng-controller="hintCtrl"><small>{{hintNo}} hints left</small></div>
+    <button class="button button-small button-block" ui-sref="success">
+      Finish mission
+    </button>
 	</ion-content>
-  <ion-footer-bar>
-    <div ng-controller="hintCtrl">
-      <a class="button button-block" ng-click="showAlert()">Use Hint</a>
-    </div>
+  <ion-footer-bar ng-controller="hintCtrl">
+    
+      <butt class="button button-clear button-block" ng-click="showAlert()">Use Hint ({{hintNo}} left)</butt>
+   
   </ion-footer-bar>
 </ion-view>

@@ -29,10 +29,15 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/')
   
     $stateProvider
-    .state('index', {
+    .state('intro', {
       url: '/',
       templateUrl: 'templates/intro.html',
       controller:'introCtrl'
+    })
+    .state('meetGhost', {
+      url: '/meetGhost',
+      templateUrl: 'templates/meet-ghost.html',
+      //controller:'meetGhostCtrl'
     })
     .state('quest', {
       url: '/quest',
@@ -49,20 +54,37 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/quest-description.html',
       controller:'questDescCtrl'
     })
+    .state('bio', {
+      url: '/bio',
+      templateUrl: 'templates/bio.html',
+      controller:'bio'
+    })
+    .state('reject', {
+      url: '/reject',
+      templateUrl: 'templates/rejectQuest.html',
+      //controller:'rejectCtrl'
+    })
+    .state('success', {
+      url: '/success',
+      templateUrl: 'templates/success.html',
+      //controller:'rejectCtrl'
+    })
     
 });
 
 app.controller('introCtrl', function($scope) {
 	$scope.ghostName = "CeciliaMofo";
 })
-
+app.controller('bio', function($scope) {
+	$scope.ghostName = "CeciliaMofo";
+})
 app.controller('questCtrl', function($scope) {
 	$scope.ghostIntroduction = "This is my Ghost introduction..";
 })
 
 app.controller('questDescCtrl', function($scope) {
 	$scope.questTitle = "Where the pink rose lays, there will be blood..";
-  $scope.questTip = "I need to find the Salvation Army";
+  $scope.questTip = "I need to find the Salvation Army.";
 })
 
 app.controller('hintCtrl', function($scope,$ionicPopup, $timeout) {
@@ -76,7 +98,7 @@ app.controller('hintCtrl', function($scope,$ionicPopup, $timeout) {
      console.log('Thank you for not eating my delicious ice cream cone');
    });
  };
-	$scope.hintNo = "2";
+	$scope.hintNo = "3";
   //$scope.hintDesc = "The Salvation Army creates dramatic sceneries to be used for education. They ofter hire me to take photos of these scences";
 })
 
