@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('urbangeist', ['ionic'])
+angular.module('urbangeist', ['ionic','howto.ctrl'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -29,8 +29,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/')
   
     $stateProvider
-    .state('index', {
-      url: '/',
+    .state('intro', {
+      url: '/intro',
       templateUrl: 'templates/intro.html',
       controller:'introCtrl'
     })
@@ -49,7 +49,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/quest-description.html',
       controller:'questDescCtrl'
     })
-    
+    .state('howto', {
+      url: '/howto',
+      templateUrl: 'templates/howto.html',
+      controller:'howtoCtrl'
+    })
 });
 
 app.controller('introCtrl', function($scope) {
