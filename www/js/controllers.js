@@ -1,0 +1,57 @@
+var app = angular.module('urbangeist', ['ionic'])
+
+app.controller('introCtrl', function($scope) {
+	$scope.ghostName = "CeciliaMofo";
+})
+app.controller('bio', function($scope) {
+	$scope.ghostName = "CeciliaMofo";
+})
+app.controller('questCtrl', function($scope) {
+	$scope.ghostIntroduction = "This is my Ghost introduction..";
+})
+
+app.controller('questDescCtrl', function($scope) {
+	$scope.questTitle = "Where the pink rose lays, there will be blood..";
+  $scope.questTip = "I need to find the Salvation Army.";
+})
+
+app.controller('userCtrl', function($scope,globalValues) {
+	$scope.experience=globalValues.experience;
+});
+
+app.controller('karlCtrl', function($scope) {
+	
+});
+
+app.controller('introCtrl', function($scope) {
+  $scope.ghostName = "CeciliaMofo";
+})
+
+app.controller('howtoCtrl', function($scope) {
+});
+
+app.controller('historicalCtrl', function($scope,globalValues) {
+	$scope.items=globalValues.ghosts;
+});
+
+app.controller('ceciliaCtrl', function($scope) {
+	
+});
+
+app.controller('accomplishedCtrl', function($scope,globalValues) {
+	$scope.items=globalValues.ghosts;
+});
+
+app.controller('hintCtrl', function($scope,$ionicPopup, $timeout) {
+  $scope.showAlert = function() {
+   var alertPopup = $ionicPopup.alert({
+     title: 'Hint #1',
+     template: 'It might taste good'
+   });
+   alertPopup.then(function(res) {
+     console.log('Thank you for not eating my delicious ice cream cone');
+   });
+ };
+  $scope.hintNo = "2";
+  //$scope.hintDesc = "The Salvation Army creates dramatic sceneries to be used for education. They ofter hire me to take photos of these scences";
+})
