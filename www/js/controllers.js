@@ -1,4 +1,6 @@
-var app = angular.module('urbangeist', ['ionic'])
+var app = angular.module('controllers', [])
+app.controller('howtoCtrl', function($scope) {
+});
 
 app.controller('introCtrl', function($scope) {
 	$scope.ghostName = "CeciliaMofo";
@@ -27,8 +29,7 @@ app.controller('introCtrl', function($scope) {
   $scope.ghostName = "CeciliaMofo";
 })
 
-app.controller('howtoCtrl', function($scope) {
-});
+
 
 app.controller('historicalCtrl', function($scope,globalValues) {
 	$scope.items=globalValues.ghosts;
@@ -53,5 +54,4 @@ app.controller('hintCtrl', function($scope,$ionicPopup, $timeout) {
    });
  };
   $scope.hintNo = "2";
-  //$scope.hintDesc = "The Salvation Army creates dramatic sceneries to be used for education. They ofter hire me to take photos of these scences";
-})
+  })
