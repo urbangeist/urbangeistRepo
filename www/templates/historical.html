@@ -12,7 +12,8 @@
     <div ng-controller='historicalCtrl'>
      	<ion-list>
      		<ion-item ng-repeat="item in items">
-     			<a ui-sref={{item.ghostName}}>{{item.ghostName}}</a>
+     			<!--<a ui-sref={{item.ghostName}}>{{item.ghostName}}</a>-->
+          <span>{{item.ghostName}}</span>
      		</ion-item>
  		</ion-list>
     </div>

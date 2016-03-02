@@ -54,4 +54,13 @@ app.controller('hintCtrl', function($scope,$ionicPopup, $timeout) {
    });
  };
   $scope.hintNo = "2";
-  })
+})
+
+app.controller("fetchData", function($scope, $http) {
+$scope.ghosts= [];
+$http.get('json/data.json').success(function(data) { 
+    console.log("success!");
+    $scope.ghosts = data.employees[0].firstName;
+    console.log(data.employees[0].firstName);
+    });    
+});

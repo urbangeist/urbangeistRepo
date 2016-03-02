@@ -62,7 +62,7 @@ angular.module('urbangeist', ['ionic','controllers'])
       //controller:'rejectCtrl'
     })
     .state('howto', {
-    url: '/',
+    url: '/howto',
     templateUrl: 'templates/howto.html',
     controller:'howtoCtrl'
   })
@@ -77,7 +77,7 @@ angular.module('urbangeist', ['ionic','controllers'])
     controller:'accomplishedCtrl'
   })
   .state('historical', {
-    url: '/historical',
+    url: '/',
     templateUrl: 'templates/historical.html',
     controller:'historicalCtrl'
   })
@@ -91,17 +91,24 @@ angular.module('urbangeist', ['ionic','controllers'])
     templateUrl: 'templates/karl.html',
     controller:'karlCtrl'
   })
-}).factory("globalValues",function(){
-  return{
-    ghosts:[
-      {ghostName: "Cecilia Nilson",date:"02/02/2016",taskName:"roses are red"},
-      {ghostName: "Karl Karlson",date:"06/01/2016",taskName:"Pickpocket"}
-    ],
-    experience:"19"
-  };
+}).factory("globalValues",function($http){
+      
+      $http.get('json/data.json').success(function(data) {
+      var ghosts=[];
+      for (var i=0;i<data.employees.length;i++) {
+      ghosts[i]=[{'ghostName':data.employees[i].firstName, 'date':"06/01/2016",'taskName':"Pickpocket"}]
+      console.log(ghosts[i].ghostName);
+      }
+      
+    })
+  
+    
+    return{
+        ghosts,
+        experience:"19"
+    }
 });
 
-/*===========================*/
 
 
 
