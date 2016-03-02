@@ -1,5 +1,3 @@
 angular.module('howto.ctrl', [])
-	.controller('howtoCtrl', function($scope) {
-    
-	}
+.controller('howtoCtrl', function($scope) {
 });

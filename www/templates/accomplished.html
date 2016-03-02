@@ -1,0 +1,27 @@
+<style type="text/css">
+  h1,h2{
+    text-align:center;
+  }
+</style>
+<ion-view title="accomplished">
+<ion-nav-title>Accomplished Tasks</ion-nav-title>
+<ion-nav-bar class="bar-dark">
+    <ion-nav-back-button class="button-clear">
+    Back
+    </ion-nav-back-button>
+</ion-nav-bar>
+<ion-nav-buttons side="right">
+  <button class="button button-icon icon ion-code-working" ui-sref="howto"></button>
+</ion-nav-buttons>
+  <ion-content>
+    <div ng-controller="accomplishedCtrl">
+      <ion-list>
+          <ion-item ng-repeat="item in items">
+            <h2>{{item.ghostName}}</h2>
+            <h3>{{item.date}}</h3>
+            <h3>{{item.taskName}}</h3>
+          </ion-item>
+        </ion-list>
+    </div>
+  </ion-content>
+</ion-view>
