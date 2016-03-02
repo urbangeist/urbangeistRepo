@@ -3,19 +3,9 @@
 	<ion-content padding="true">
     <div ng-controller="questDescCtrl">
       <h3>{{questTitle}}</h3>
-      <div class="card">
+      <div class="card" ng-repeat="item in items">
         <div class="item item-text-wrap">
          <p>{{questTip}}</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="item item-text-wrap">
-         <p>Speed is important. So important that you only notice when it isn't there. Ionic is built to perform and behave great on the latest mobile devices.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="item item-text-wrap">
-         <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </div>
       </div>
     </div>
