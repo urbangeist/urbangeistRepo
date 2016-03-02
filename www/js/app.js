@@ -20,7 +20,7 @@ angular.module('urbangeist', ['ionic'])
   $urlRouterProvider.otherwise('/')
     $stateProvider
     .state('intro', {
-      url: '/',
+      url: '/intro',
       templateUrl: 'templates/intro.html',
       controller:'introCtrl'
     })
