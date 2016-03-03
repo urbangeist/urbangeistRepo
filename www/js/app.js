@@ -1,8 +1,3 @@
-// Ionic Starter App
-
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
 
 var obj;
 angular.module('urbangeist', ['ionic','controllers'])
@@ -24,7 +19,7 @@ angular.module('urbangeist', ['ionic','controllers'])
     
     $stateProvider
     .state('intro', {
-      url: '/',
+      url: '/intro',
       templateUrl: 'templates/intro.html',
       controller:'introCtrl'
     })
@@ -44,7 +39,7 @@ angular.module('urbangeist', ['ionic','controllers'])
      // controller:'journeyCtrl'
     })
     .state('questDescription', {
-      url: '/questDescription',
+      url: '/',
       templateUrl: 'templates/quest-description.html',
       controller:'questDescCtrl'
     })
@@ -102,27 +97,8 @@ angular.module('urbangeist', ['ionic','controllers'])
      } else {
          return response.data;
      }
- });
+ })
 });
-
- /*
-$http.get('json/data.json').success(function(data) {
-      obj=data.ghosts
-      for (var i=0;i<data.ghosts.length;i++) {
-          console.log(String(obj[i].name))
-      }
-  })
-  return{
-        obj,
-        experience:"19"
-      }
- */       
-
-/*
-var entities={}
-  var obj={}
-  
-      */
 
 
 

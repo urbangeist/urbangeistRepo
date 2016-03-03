@@ -3,19 +3,32 @@
 	<ion-content padding="true">
     <div ng-controller="questDescCtrl">
       <h3>{{questTitle}}</h3>
-      <div class="card" ng-repeat="item in items">
-        <div class="item item-text-wrap">
-         <p>{{questTip}}</p>
+      <div class="cardTips">
+        <div class="card">
+          <div class="item item-text-wrap">
+           <p>{{questTip1}}</p>
+          </div>
         </div>
+          <div class="card hide">
+            <div class="item item-text-wrap">
+             <p>{{questTip2}}</p>
+            </div>
+          </div>
       </div>
+      <button class="button button-small button-block" id="newQuestTip" ng-click="showTip()">
+     New Quest Tip
+    </button>
     </div>
+    
     <button class="button button-small button-block" ui-sref="success">
       Finish mission
     </button>
 	</ion-content>
   <ion-footer-bar ng-controller="hintCtrl">
-    
       <butt class="button button-clear button-block" ng-click="showAlert()">Use Hint ({{hintNo}} left)</butt>
-   
   </ion-footer-bar>
+  <script>
+  // A $( document ).ready() block.
+
+</script>
 </ion-view>

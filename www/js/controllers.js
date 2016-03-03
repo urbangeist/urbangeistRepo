@@ -2,40 +2,45 @@ var app = angular.module('controllers', [])
 app.controller('howtoCtrl', function($scope) {
 });
 
-app.controller('introCtrl', function($scope) {
-	$scope.ghostName = "CeciliaMofo";
+app.controller('introCtrl', function($scope, ListFactory) {
+	ListFactory.then(function(response){
+        $scope.ghostName = response.ghosts[0].name
+        $scope.ghostIntro = response.ghosts[0].introduction
+    })
 })
 app.controller('bio', function($scope, ListFactory) {
     ListFactory.then(function(response){
         $scope.ghostName = response.ghosts[0].name
-        $scope.ghostIntro=response.ghosts[0].introduction
+        $scope.ghostIntro = response.ghosts[0].introduction
     })
 })
 app.controller('questCtrl', function($scope,ListFactory) {
     ListFactory.then(function(response){
-        $scope.questTitle = response.ghosts[0].tasks[0].questTitle
+        $scope.questTitle = response.ghosts[0].tasks[0].title
         $scope.questIntro = response.ghosts[0].tasks[0].questIntro
+        $scope.questDuration = response.ghosts[0].tasks[0].questDuration
     })
 })
 
 app.controller('questDescCtrl', function($scope,ListFactory) {
     ListFactory.then(function(response){
-        $scope.questTitle = response.ghosts[0].tasks[0].questTitle
-        $scope.questTip = response.ghosts[0].tasks[0].questIntro
+        $scope.questTitle = response.ghosts[0].tasks[0].title
+        $scope.questTip1 = response.ghosts[0].tasks[0].taskDescription[0].message
+        $scope.questTip2 = response.ghosts[0].tasks[0].taskDescription[1].message
+        $scope.showTip = function() {
+          angular.element(document).find('.cardTips').remove();
+          //angular.element('.cardTips').hide();
+        };
     })
 })
 
-app.controller('userCtrl', function($scope,globalValues) {
-	$scope.experience=globalValues.experience;
+app.controller('userCtrl', function($scope) {
+	//$scope.experience=globalValues.experience;
 });
 
 app.controller('karlCtrl', function($scope) {
 	
 });
-
-app.controller('introCtrl', function($scope) {
-  $scope.ghostName = "CeciliaMofo";
-})
 
 app.controller('historicalCtrl', function($scope, ListFactory) {
     ListFactory.then(function(response){
@@ -52,8 +57,8 @@ app.controller('ceciliaCtrl', function($scope) {
 	
 });
 
-app.controller('accomplishedCtrl', function($scope,globalValues) {
-	$scope.items=globalValues.obj;
+app.controller('accomplishedCtrl', function($scope) {
+	//$scope.items=globalValues.obj;
 });
 
 app.controller('hintCtrl', function($scope,$ionicPopup, $timeout,ListFactory) {
@@ -75,10 +80,10 @@ app.controller("fetchData", function($scope, $http) {
   ListFactory.then(function(response){
         $scope.items = response.ghosts
     })
-$scope.ghosts= [];
-$http.get('json/data.json').success(function(data) { 
-    console.log("success!");
-    $scope.ghosts = data.employees[0].firstName;
-    console.log(data.employees[0].firstName);
-    });    
+  $scope.ghosts= [];
+  $http.get('json/data.json').success(function(data) { 
+      console.log("success!");
+      $scope.ghosts = data.employees[0].firstName;
+      console.log(data.employees[0].firstName);
+      });    
 });
