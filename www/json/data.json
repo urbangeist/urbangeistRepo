@@ -1,5 +1,166 @@
-{"employees":[
-    {"firstName":"John", "lastName":"Doe"},
-    {"firstName":"Anna", "lastName":"Smith"},
-    {"firstName":"Peter", "lastName":"Jones"}
-]}
+{
+    "ghosts": [
+        {
+            "name": "Anna Larsson",
+            "title": "Take me to the photography studio",
+            "introduction": "Greetings, I am Anna Larsson from Malmö. My father was also a soldier at the Salvation Army, so I joined it when I was 14, back in the 1887. I moved around a lot in Sweden and abroad with my husband and kids, but now we are settled in Malmö to help the people of my city.",
+            "tasks": [
+                {
+                    "type": "collaborative",
+                    "questTitle": "Meeting the photographer",
+                    "questIntro": "We need to meet the photographer in 15 minutes and take her to Folkets Park within 40 minutes.",
+                    "questduration": "40 minutes",
+                    "taskDescription": [
+                        {
+                            "message": "Remember the photography studio we've been to yesterday? We need to get there within 15 minutes to meet the photographer."
+                        },
+                        {
+                            "message": "Then we will have to go to Folkets Park together with the photographer to meet the Salvation Army, today is the day the army is creating the Vinterfest scene. We need to be somewhere inside Folkets Park with the photographer within 40 minutes."
+                        }
+                    ],
+                    "hint": [
+                        {
+                            "message": "The name of the photographer is Cecilia Nelson. Look for 'Cecilia Nelson', she has haunted another phone in the game."
+                        },
+                        {
+                            "message": "The Salvation Army is around a building within Folkets Park, I don't know which building. Just walk around and look for them."
+                        },
+                        {
+                            "message": "Cecilia might have already spotted the Salvation Army, ask her about where the Salvation Army is."
+                        }
+                    ],
+                    "ouput": "Now Cecilia needs to shoot a photo of the Salvation Army's scene."
+                },
+                {
+                    "type": "individual",
+                    "title": "Take me to the photography studio",
+                    "questIntro": "We need to get to Triangeltorget to find a photographer for the Salvation Army, we have only 1 hour.",
+                    "questduration": "1 hour",
+                    "taskDescription": [
+                        {
+                            "message": "The Salvation Army will create the scene of Vinterfest tomorrow. The photographs of these scenes are used to educate people, and I've recently started helping with the creation of these scenes."
+                        },
+                        {
+                            "message": "We don't have any photographers in the army, so I need to find one in an hour to hire to make the photo of tomorrow's scene. I've passed by a good photography studio somewhere close to Triangeltorget a few days ago. Shall we get going there?"
+                        }
+                    ],
+                    "hint": [
+                        {
+                            "message": "The photography studio is on Södra Förstadsgatan."
+                        },
+                        {
+                            "message": "The photography studio might not be still existing today."
+                        },
+                        {
+                            "message": "The exact location of the photography studio is Södra Förstadsgatan 36."
+                        }
+                    ],
+                    "ouput": "Now you've found the exact location of the photography studio, make a photo of this place, so that we can find it easily tomorrow."
+                }
+            ]
+        },
+        {
+            "name": "Cecilia Nelson",
+            "title": "",
+            "introduction": "",
+            "tasks": [
+                {
+                    "type": "collaborative",
+                    "questTitle": "Meeting the Salvation Army.",
+                    "questIntro": "We need to get back to my photography studio within 15 minutes, then we will head somewhere else for the shooting.",
+                    "questduration": "40 minutes",
+                    "taskDescription": [
+                        {
+                            "message": "So, the Salvation Army is hiring me to make a photo for them for the first time ever. Anna Larsson from the army will arrive at my studio within 15 minutes, we have to get there before her."
+                        },
+                        {
+                            "message": "I do not know what for the Salvation Army is hiring me today, Anna will help me find out. Let's get to my studio now!"
+                        }
+                    ],
+                    "hint": [
+                        {
+                            "message": "My studio was at Södra Förstadsgatan 36, did you already forget?"
+                        },
+                        {
+                            "message": "Anna Larsson is another ghost that has haunted another phone in the game."
+                        },
+                        {
+                            "message": "There I've spotted the Salvation Army's scene in front of Moriska Paviljongen."
+                        }
+                    ],
+                    "ouput": "The Salvation Army hired me shoot a photo of their scene, so let's make a photo of the army's scene now!"
+                },
+                {
+                    "type": "individual",
+                    "title": "",
+                    "questduration": "",
+                    "taskDescription1": "",
+                    "taskDescription2": "",
+                    "hint1": "",
+                    "hint2": "",
+                    "hint3": "",
+                    "ouput": ""
+                }
+            ]
+        },
+        {
+            "name": "Karl Gustaf",
+            "title": "Catch me if you can  ???",
+            "introduction": "Hej Hej, Pal, I need your help! I am Karl Gustaf. I am just 8-years old and have to make a living myself. I used to beg for money, but not everyone gives money to beggars. Most of them don’t have money to give away anyways. That’s why I started pickpocketing. I am learning how to get better at this.",
+            "tasks": [
+                {
+                    "type": "collaborative",
+                    "questTitle": "",
+                    "questIntro": "",
+                    "questduration": "",
+                    "taskDescription": [
+                        {
+                            "message": ""
+                        },
+                        {
+                            "message": ""
+                        }
+                    ],
+                    "hint": [
+                        {
+                            "message": ""
+                        },
+                        {
+                            "message": ""
+                        },
+                        {
+                            "message": ""
+                        }
+                    ],
+                    "ouput": ""
+                },
+                {
+                    "type": "individual",
+                    "title": "Catch me if you can  ???",
+                    "questIntro": "I stole this wallet from a guy just now, and need to get away before I am caught by the police. We need to get to Lilla Torg within 20 minutes, but we have to avoid the police. I can give you some suggestions to avoid the police, you may follow them if you like. Otherwise, just act normal, blend in, and no one will notice us. We won’t get caught!.",
+                    "questduration": "20 minutes",
+                    "taskDescription": [
+                        {
+                            "message": ""
+                        },
+                        {
+                            "message": ""
+                        }
+                    ],
+                    "hint": [
+                        {
+                            "message": ""
+                        },
+                        {
+                            "message": ""
+                        },
+                        {
+                            "message": ""
+                        }
+                    ],
+                    "ouput": ""
+                }
+            ]
+        }
+    ]
+}
