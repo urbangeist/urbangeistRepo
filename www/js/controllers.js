@@ -1,4 +1,7 @@
 var app = angular.module('controllers', [])
+
+app.value("hintsNr", 3)
+
 app.controller('howtoCtrl', function($scope) {
 });
 
@@ -57,23 +60,45 @@ app.controller('ceciliaCtrl', function($scope) {
 	
 });
 
-app.controller('accomplishedCtrl', function($scope) {
-	//$scope.items=globalValues.obj;
+app.controller('accomplishedCtrl', function($scope,ListFactory) {
+	ListFactory.then(function(response){
+        $scope.questOutput = response.ghosts[0].tasks[0].output
+    })
+});
+app.controller('successCtrl', function($scope,ListFactory) {
+	ListFactory.then(function(response){
+        $scope.questOutput = response.ghosts[0].tasks[0].output
+    })
 });
 
-app.controller('hintCtrl', function($scope,$ionicPopup, $timeout,ListFactory) {
+
+
+app.controller('hintCtrl', function($scope,$ionicPopup,ListFactory,hintsNr) {
   ListFactory.then(function(response){
+  $scope.hintsNr = hintsNr;
+  
+  $scope.getHints = function() {
+    if (hintsNr==0) {
+      return true;
+    }else{
+      return false;
+    }
+  }
+  
   $scope.showAlert = function() {
+    console.log("Hints Nr:"+hintsNr);
      var alertPopup = $ionicPopup.alert({
-       title: 'Hint #1',
+       title: 'Hint',
        template: response.ghosts[0].tasks[0].hint[0].message
      });
+     hintsNr--;
+     $scope.hintsNr=hintsNr;
      alertPopup.then(function(res) {
        console.log('Thank you for not eating my delicious ice cream cone');
      });
    }
   })
-  $scope.hintNo = "2";
+ // $scope.hintNo = "2";
 })
 
 app.controller("fetchData", function($scope, $http) {

@@ -9,23 +9,23 @@
            <p>{{questTip1}}</p>
           </div>
         </div>
-          <div class="card hide">
+          <div class="card" ng-show="showme">
             <div class="item item-text-wrap">
              <p>{{questTip2}}</p>
             </div>
           </div>
       </div>
-      <button class="button button-small button-block" id="newQuestTip" ng-click="showTip()">
+    <button class="button button-small button-block" id="newQuestTip" ng-click="showme=true">
      New Quest Tip
     </button>
     </div>
-    
     <button class="button button-small button-block" ui-sref="success">
       Finish mission
     </button>
+    
 	</ion-content>
   <ion-footer-bar ng-controller="hintCtrl">
-      <butt class="button button-clear button-block" ng-click="showAlert()">Use Hint ({{hintNo}} left)</butt>
+      <button class="button button-positive button-block" ng-click="showAlert()" ng-disabled="getHints()">Use Hint ({{hintsNr}} left)</button>
   </ion-footer-bar>
   <script>
   // A $( document ).ready() block.

@@ -14,6 +14,7 @@ angular.module('urbangeist', ['ionic','controllers'])
   });
 })
 
+
 .config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/')
     
@@ -56,7 +57,7 @@ angular.module('urbangeist', ['ionic','controllers'])
     .state('success', {
       url: '/success',
       templateUrl: 'templates/success.html',
-      //controller:'rejectCtrl'
+      controller:'successCtrl'
     })
     .state('howto', {
     url: '/howto',

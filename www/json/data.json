@@ -24,7 +24,7 @@
               "message": "The exact location of the photography studio is Södra Förstadsgatan 36."
             }
           ],
-          "ouput": "Now you've found the exact location of the photography studio, make a photo of this place, so that we can find it easily tomorrow."
+          "output": "Now you've found the exact location of the photography studio, make a photo of this place, so that we can find it easily tomorrow."
         },
         {
           "type": "collaborative",
@@ -50,7 +50,7 @@
               "message": "Cecilia might have already spotted the Salvation Army, ask her about where the Salvation Army is."
             }
           ],
-          "ouput": "Now Cecilia needs to shoot a photo of the Salvation Army's scene."
+          "output": "Now Cecilia needs to shoot a photo of the Salvation Army's scene."
         }
       ]
     },
@@ -82,7 +82,7 @@
               "message": "There I've spotted the Salvation Army's scene in front of Moriska Paviljongen."
             }
           ],
-          "ouput": "The Salvation Army hired me shoot a photo of their scene, so let's make a photo of the army's scene now!"
+          "output": "The Salvation Army hired me shoot a photo of their scene, so let's make a photo of the army's scene now!"
         },
         {
           "type": "individual",
@@ -126,7 +126,7 @@
               "message": ""
             }
           ],
-          "ouput": ""
+          "output": ""
         },
         {
           "type": "individual",
@@ -152,7 +152,7 @@
               "message": ""
             }
           ],
-          "ouput": ""
+          "output": ""
         }
       ]
     }
