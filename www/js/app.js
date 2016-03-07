@@ -20,7 +20,7 @@ angular.module('urbangeist', ['ionic','controllers'])
     
     $stateProvider
     .state('intro', {
-      url: '/intro',
+      url: '/',
       templateUrl: 'templates/intro.html',
       controller:'introCtrl'
     })
@@ -40,7 +40,7 @@ angular.module('urbangeist', ['ionic','controllers'])
      // controller:'journeyCtrl'
     })
     .state('questDescription', {
-      url: '/',
+      url: '/questDescription',
       templateUrl: 'templates/quest-description.html',
       controller:'questDescCtrl'
     })
