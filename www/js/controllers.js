@@ -86,7 +86,6 @@ app.controller('hintCtrl', function($scope,$ionicPopup,ListFactory,hintsNr) {
   }
   
   $scope.showAlert = function() {
-    console.log("Hints Nr:"+hintsNr);
      var alertPopup = $ionicPopup.alert({
        title: 'Hint',
        template: response.ghosts[0].tasks[0].hint[0].message
@@ -112,3 +111,24 @@ app.controller("fetchData", function($scope, $http) {
       console.log(data.employees[0].firstName);
       });    
 });
+
+app.controller('journeyCtrl', function($scope) {
+  // FAKE CONTENT FOR THE DEMO
+  $scope.timeline = [{
+  	date: new Date(),
+  	picture:"fiji.png",
+  	text: "Lorem ipsum dolor sit amet",
+  },{
+  	date: new Date(),
+  	picture:"spring.png",
+  	text: "Lorem ipsum dolor sit amet",
+  },{
+  	date: new Date(),
+  	picture:"fiji.png",
+  	text: "Lorem ipsum dolor sit amet",
+  },{
+  	date: new Date(),
+  	picture:"fiji.png",
+  	text: "Lorem ipsum dolor sit amet",
+  }]
+})

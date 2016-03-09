@@ -1,17 +1,21 @@
-<ion-view title="meetGhost">
-  <ion-nav-title>3days 4 hours</ion-nav-title>
-	<ion-content padding="true">
-    <img src="http://orig12.deviantart.net/d929/f/2013/013/0/1/profile_picture_by_little_ghost_girl-d5rd87g.jpg" width="100%">
+<ion-view title="">
+  <!--<ion-nav-title>3days 4 hours</ion-nav-title>-->
+	<ion-content padding="true" ng-controller="introCtrl">
+     <h1>{{ghostName}}</h1>
     <div padding="true">
-     <button class="button button-small button-block button-dark" ui-sref="bio">
-      My Biography
+      <div class="padding-lr20">
+        <p>{{ghostIntro}}</p>
+      </div>
+      
+     <button class="button button-link button-block" ui-sref="bio">
+     &raquo; My Biography &laquo;
     </button>
-     <button class="button button-small button-block button-dark" ui-sref="journey">
-      My Journeys
+     <button class="button button-link button-block" ui-sref="journey">
+    &raquo;  My Journeys &laquo;
     </button>
     </div>   
 	</ion-content>
-  <div class="bar bar-footer">
-  <button class="button button-clear button-block" ui-sref="quest">Start Quest</button>
-</div>
+  <div class="bar bar-clear bar-footer">
+    <button class="button button-block" ui-sref="quest">Start Quest</button>
+  </div>
 </ion-view>

@@ -37,7 +37,7 @@ angular.module('urbangeist', ['ionic','controllers'])
     .state('journey', {
       url: '/journey',
       templateUrl: 'templates/journey.html',
-     // controller:'journeyCtrl'
+      controller:'journeyCtrl'
     })
     .state('questDescription', {
       url: '/questDescription',

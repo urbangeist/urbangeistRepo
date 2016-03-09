@@ -1,30 +1,22 @@
-<ion-view title="journey" padding="true">
-  <ion-nav-title>3days 4 hours</ion-nav-title>
-   <ion-content padding="true">
-      <div>
-         <ion-list ng-controller="ghostHistory">
-            <ion-item ng-repeat="item in items"
-               class="item-thumbnail-left">
-               <!--<img ng-src="{{item.img}}">-->
-               <img src="http://weknowyourdreamz.com/images/ghost/ghost-01.jpg">
-               <h2>{{item.title}}</h2>
-               <p>{{item.description}}</p>
-               <ion-option-button class="button-positive"
-                  ng-click="share(item)">
-                  Share
-               </ion-option-button>
-               <ion-option-button class="button-assertive"
-                  ng-click="edit(item)">
-                  Edit
-               </ion-option-button>
-               <ion-delete-button class="ion-minus-circled"
-                  ng-click="items.splice($index, 1)">
-               </ion-delete-button>
-               <ion-reorder-button class="ion-navicon"
-                  on-reorder="reorderItem(item, $fromIndex, $toIndex)">
-               </ion-reorder-button>
-            </ion-item>
-         </ion-list>
-      </div>
-   </ion-content>
+<ion-view title="journey">
+  <ion-content class="padding">
+      <section id="cd-timeline" class="cd-container">
+        <div ng-repeat="activity in timeline">
+          <div class="cd-timeline-block">
+          	<!-- CUSTOMIZE YOUR STYLE USING DEFAULT IONIC VALUES SUCH AS POSITIVE, CALM, BALANCED,... -->
+            
+             <p class="pic-time">{{activity.date | date: "d MMM yy"}}</p>
+              <!--<img ng-src="/img/{{activity.profilePicture}}"></img>-->
+            
+            <!-- CUSTOMIZE YOUR STYLE USING DEFAULT IONIC VALUES SUCH AS POSITIVE, CALM, BALANCED,... -->
+            <div class="cd-timeline-content">
+            	<!--<h5 class="marginBottom0 marginTop0">{{activity.title}}</h5>-->
+            	<!--<p class="marginTop5 cd-author">by {{activity.author}} on {{activity.date | date: "d MMM"}}</p>-->
+              <img ng-src="/img/timeline/{{activity.picture}}"></img>
+            	
+            </div>
+          </div>
+        </div>
+      </section>
+  </ion-content>
 </ion-view>

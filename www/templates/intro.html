@@ -1,12 +1,14 @@
-<ion-view title="intro"  padding="true">
-<ion-nav-title>Intro</ion-nav-title>
+<ion-view title=""  padding="true" hide-nav-bar="true">
+<!--<ion-nav-title>Intro</ion-nav-title>-->
 	<ion-content padding="true">
     <div ng-controller="introCtrl">
-     <img src="http://orig12.deviantart.net/d929/f/2013/013/0/1/profile_picture_by_little_ghost_girl-d5rd87g.jpg" width="30%">
-    <h2>{{ghostName}}, just haunted you!</h2>
-     <p>{{ghostIntro}}</p>
-     <a  class="button button-block" ui-sref="meetGhost">Meet {{ghostName}}</a>
+    <h1>{{ghostName}}, just haunted you!</h1>
+    <img src="img/anna-larson.png" class="center">
+     <!--<p>{{ghostIntro}}</p>-->
+    
     </div>
-    <!--<div ng-controller='fetchData'>{{item}}</div>-->
+    <div class="bar bar-footer bar-clear">
+  <a  class="button button-block" ui-sref="meetGhost">Meet {{ghostName}}</a>
+</div>
 	</ion-content>
 </ion-view>

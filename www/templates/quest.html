@@ -2,15 +2,19 @@
   <ion-nav-title>Quest</ion-nav-title>
 	<ion-content padding="true">
     <div ng-controller="questCtrl">
-      <h3>{{questTitle}}</h3>
+      <h2>{{questTitle}}</h2>
+      <div class="quest-img-container">
+        <img src="img/quests/camera.png">
+      </div>
+      
+      <div class="padding-lr20">
       <p>{{questIntro}}</p>
-      <p>
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramble
-      </p> 
-<p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      <p>You have <strong>{{questDuration}}</strong> to solve the task.</p>
+      
+       <p>You have <strong class="highlight">{{questDuration}}</strong> to solve the task.</p>
+       </div>
+      
       <a ui-sref="questDescription" class="button button-block">Accept Quest</a>
-      <a ui-sref="reject" class="button button-block">Reject Quest</a>
+      <a ui-sref="reject" class="button button-block button-link">Reject Quest</a>
     </div>
 	</ion-content>
 </ion-view>
