@@ -1,6 +1,6 @@
 
 var obj;
-angular.module('urbangeist', ['ionic','controllers'])
+angular.module('urbangeist', ['ionic','controllers','ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -20,7 +20,7 @@ angular.module('urbangeist', ['ionic','controllers'])
     
     $stateProvider
     .state('intro', {
-      url: '/',
+      url: '/intro',
       templateUrl: 'templates/intro.html',
       controller:'introCtrl'
     })
@@ -35,7 +35,7 @@ angular.module('urbangeist', ['ionic','controllers'])
       controller:'questCtrl'
     })
     .state('journey', {
-      url: '/journey',
+      url: '/',
       templateUrl: 'templates/journey.html',
       controller:'journeyCtrl'
     })

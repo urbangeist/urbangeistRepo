@@ -3,10 +3,9 @@
 	<ion-content padding="true" >
     <div ng-controller="successCtrl">
       <h4>{{questOutput}}</h4>
-    </div>
-      
+    </div>   
 	</ion-content>
      <div class="bar bar-footer">
-        <button class="button button-clear button-block" ui-sref="journey">Submit Photo</button>
+        <button class="button button-clear button-block" ng-click="takePicture()">Submit Photo</button>
     </div>
 </ion-view>
