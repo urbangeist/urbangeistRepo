@@ -163,10 +163,12 @@ app.controller('journeyCtrl', function($scope,$http) {
   // FAKE CONTENT FOR THE DEMO
   var id="5"
   $http.get('http://ciprianamaritei.com/urbanfbls/connect.php?id='+id+'&com=search').then(function(response) {
-      console.log(response.status);
-      console.log(response.data);
+    $scope.url = response.data[0].url
+    console.log(response);
+      //console.log(response.url);
+      //console.log(response.id);
     }, function(response) {
-      console.log(response.status);
+      //console.log(response.status);
   });
   $scope.timeline = [{
   	date: new Date(),
