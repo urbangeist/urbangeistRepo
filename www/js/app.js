@@ -35,7 +35,7 @@ angular.module('urbangeist', ['ionic','controllers','ngCordova'])
       controller:'questCtrl'
     })
     .state('journey', {
-      url: '/',
+      url: '/journey',
       templateUrl: 'templates/journey.html',
       controller:'journeyCtrl'
     })
@@ -65,7 +65,7 @@ angular.module('urbangeist', ['ionic','controllers','ngCordova'])
     controller:'howtoCtrl'
   })
   .state('user', {
-    url: '/user',
+    url: '/',
     templateUrl: 'templates/user.html',
     controller:'userCtrl'
   })

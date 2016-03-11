@@ -37,8 +37,28 @@ app.controller('questDescCtrl', function($scope,ListFactory) {
     })
 })
 
-app.controller('userCtrl', function($scope) {
-	//$scope.experience=globalValues.experience;
+app.controller('userCtrl', function($scope,$cordovaGeolocation,ListFactory, $state, $stateParams, $cordovaVibration) {
+	ListFactory.then(function(response){
+    var latGhost = response.ghosts[0].location.latitude
+    var lonGhost = response.ghosts[0].location.longitude
+    var options = {timeout: 10000, enableHighAccuracy: true};
+    $cordovaGeolocation.getCurrentPosition(options).then(function(position){
+      var lat=position.coords.latitude
+      var lon=position.coords.longitude
+      const radius = 0.029//0.002382
+      if(lat>(latGhost-radius)&&lat<(latGhost+radius)&&lon>(lonGhost-radius)&&lon<(lonGhost+radius)){
+        $cordovaVibration.vibrate(500);
+        $state.go("intro")
+        //IMPORTANT 
+        //When is this variable false?
+        $scope.haunted=true
+      }else{
+        $scope.haunted=false
+      }
+    }, function(error){
+        console.log("Could not get location");
+    });
+  })
 });
 
 app.controller('karlCtrl', function($scope) {
@@ -161,13 +181,6 @@ app.controller("fetchData", function($scope, $http) {
 
 app.controller('journeyCtrl', function($scope,$http) {
   // FAKE CONTENT FOR THE DEMO
-  var id="5"
-  $http.get('http://ciprianamaritei.com/urbanfbls/connect.php?id='+id+'&com=search').then(function(response) {
-      console.log(response.status);
-      console.log(response.data);
-    }, function(response) {
-      console.log(response.status);
-  });
   $scope.timeline = [{
   	date: new Date(),
   	picture:"https://pixabay.com/static/uploads/photo/2014/07/27/20/29/landscape-403165_960_720.jpg",
