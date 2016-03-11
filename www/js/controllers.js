@@ -181,6 +181,16 @@ app.controller("fetchData", function($scope, $http) {
 
 app.controller('journeyCtrl', function($scope,$http) {
   // FAKE CONTENT FOR THE DEMO
+  var id="5"
+  $http.get('http://ciprianamaritei.com/urbanfbls/connect.php?id='+id+'&com=search').then(function(response) {
+    $scope.url = response.data[0].url
+    console.log(response);
+      //console.log(response.url);
+      //console.log(response.id);
+    }, function(response) {
+      //console.log(response.status);
+  });
+
   $scope.timeline = [{
   	date: new Date(),
   	picture:"https://pixabay.com/static/uploads/photo/2014/07/27/20/29/landscape-403165_960_720.jpg",
